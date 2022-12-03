@@ -54,8 +54,6 @@ if n%2 == 0:
         iks.append(xm - xl*s)
         w.append(2/((1-s**2)*(derivacija_Legendarnog_polinoma(n,s)**2)))
     rješenje = 0
-    def funk(x):
-        return x**2
     for r in range(0,len(w)):
         rješenje += (x2-x1)*(fja(iks[r])*w[r])/2
     print(rješenje)
@@ -82,8 +80,6 @@ else:
         iks.append(xm - xl*s)
         w.append(2/((1-s**2)*(derivacija_Legendarnog_polinoma(n,s)**2)))
     rješenje = 0
-    def funk(x):
-        return x**2
     for r in range(0,len(w)):
         rješenje += (x2-x1)*(fja(iks[r])*w[r])/2
     print(rješenje)
