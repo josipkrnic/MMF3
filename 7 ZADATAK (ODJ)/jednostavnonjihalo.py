@@ -29,7 +29,7 @@ def euler(y0,v0,t0=0,tN=20,N=2000,l=0.2484902028828339,g=9.81,fi_0=0):
     for i in range(1,N):
         t.append(t0+i*h)
         v.append(v[i-1] + f(y[i-1],t[i-1])*h)
-        y.append(y[i-1] + v[i]*h)
+        y.append(y[i-1] + v[i-1]*h)
     y_deg = []
     for j in y:
         y_deg.append(j*180/numpy.pi)
