@@ -1,0 +1,22 @@
+import jednostavnonjihalo as nj
+import numpy
+import matplotlib.pyplot as plt
+a,b = nj.analiticki(4)
+T = nj.analiticki_period()
+a1,b1,v1,c1 = nj.euler(4,0,0,20*T,200000)
+a2,b2,v2,c2 = nj.rk4(4,0,0,20*T,200000)
+a_1,b_1,v3,c_1 = nj.euler(4,0,0,20*T,20000)
+a_2,b_2,v4,c_2 = nj.rk4(4,0,0,20*T,20000)
+plt.subplot(1,2,1)
+plt.plot(a,b,c="r")
+plt.plot(a1,c1,c="g")
+plt.plot(a2,c2,c="b")
+plt.legend(["Analitički","Euler","RK4"],loc="upper right")
+plt.title("Usporedba za N = 200000")
+plt.subplot(1,2,2)
+plt.plot(a,b,c="r")
+plt.plot(a_1,c_1,c="g")
+plt.plot(a_2,c_2,c="b")
+plt.legend(["Analitički","Euler","RK4"],loc="upper right")
+plt.title("Usporedba za N = 20000")
+plt.show()
