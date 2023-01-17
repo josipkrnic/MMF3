@@ -1,4 +1,4 @@
-import math
+import math as m
 from tabulate import tabulate
 import numpy as np
 k = 180
